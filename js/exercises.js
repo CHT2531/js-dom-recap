@@ -8,59 +8,11 @@ let searchBox;
 let filmList;
 let goBtn;
 
-
-function clearSearchResults(){
-		while(filmList.firstChild){
-	    filmList.removeChild(filmList.firstChild);
-		}
-}
-
-function searchFilms(searchTerm){
-	const matchingFilms = films.filter(function(film){
-		if(film.title.toLowerCase().search(searchTerm)>-1){
-		  return true;
-		}else{
-		  return false;
-		}
-	})
-	return matchingFilms;
-}
-
-function displayResults(matchingFilms){
-	const resultsFragment = document.createDocumentFragment()
-	matchingFilms.forEach(function (film) {
-  	const li = document.createElement('li')
-  	li.textContent = film.title;
-  	resultsFragment.appendChild(li)
-	})
-	filmList.appendChild(resultsFragment)
-}
-
-
-
 function doSearch()
 {
-	clearSearchResults()
-	const searchTerm = searchBox.value.toLowerCase();
-	if(searchTerm.length<2){
-		return;
-	}
-	console.log(`The search term is ${searchTerm}.`);
-	const matchingFilms = searchFilms(searchTerm);
-	displayResults(matchingFilms);
-	//output results
+	console.log("doSearch is working");
 }
 
-function init(){
-	searchBox = document.querySelector("#search-box");
-	goBtn = document.querySelector("#go-btn");
-	searchBox.focus();
-	filmList = document.querySelector("#film-list");
-	goBtn.addEventListener("click",doSearch);
-	searchBox.addEventListener("keyup",doSearch);
-}
-
-window.addEventListener("load",init,false);
 
 // 1. Add some JavaScript that will put focus on the search box when the page loads.
 
@@ -90,7 +42,7 @@ if(title.search(searchTerm)>-1){
 
 // 8. A problem with this is that when the user searches again the results get added to the previous results. Add some code in doSearch() that will remove the previous search results.
 
-// 9. Modify the app so that the user doesn't have to use the correct case i.e. they can enter 'jaws' and still get the film Jaws as a result. If you aren't sure how to do this, do some research into the toLowerCase() method of JavaScript strings.
+// 9. Modify your application so that the user doesn't have to use the correct case i.e. they can enter 'jaws' and still get the film Jaws as a result. If you aren't sure how to do this, do some research into the toLowerCase() method of JavaScript strings.
 
 //10. It would be good if the search ran whenever the user types into the search box i.e. they don't have to press the GO button. Add some code to your app so that the search runs in response to a keyup event.
 
