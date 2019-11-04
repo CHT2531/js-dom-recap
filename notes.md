@@ -228,4 +228,4 @@ txtBox.focus(); //apply focus to the txt box
 ```
 
 ## Additional resources
-If you are struggling there are lots of resources online Udacity offer a short course on the DOM (https://www.udacity.com/course/javascript-and-the-dom--ud117). The Mozilla Developer Network (MDN) is a really good reference site ( https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
+If you are struggling there are lots of resources online. For example, Udacity offer a short course on the DOM (https://www.udacity.com/course/javascript-and-the-dom--ud117), and the Mozilla Developer Network (MDN) is a really good reference site ( https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
