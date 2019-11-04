@@ -22,6 +22,7 @@ console.log(outputDiv); //<div id="output">Lorem ipsum dolar</div>
 ```
 ### querySelectorAll()
 *querySelectorAll()* returns multiple elements as a NodeList (like an array). Here's an example:
+
 HTML
 ```html
 <div id="output">Lorem ipsum dolar</div>
@@ -64,7 +65,10 @@ This would result in the div element changing to:-
 ```
 
 ## Creating new elements
-To do this we use *document.createElement()*. Here's an example.
+To do this we use *document.createElement()*.
+
+### Inserting single elements
+Here's an example of inserting a single paragraph element into the page.
 
 HTML
 ```html
@@ -110,7 +114,7 @@ countries.forEach(function(country){
     newParagraph.appendChild(newText); //insert the text into the <p>
     countriesFragment.appendChild(newParagraph); //insert the <p> into the fragment
 });
-const countriesDiv = document.querySelector("#countries"); //create a fragment
+const countriesDiv = document.querySelector("#countries"); //get hold of the div from the page
 countriesDiv.appendChild(countriesFragment); // we only update the document once!
 
 ```
@@ -126,6 +130,8 @@ Would result in:-
 
 ## Removing Elements
 To do this we can use *removeChild()*.
+
+### Removing a single element
 
 HTML
 
@@ -143,7 +149,9 @@ Would result in
 <div id="content"></div>
 ```
 
-Again we can use a loop to remove multiple child elements
+### Removing multiple elements
+
+We can use a *while* loop to remove multiple child elements
 
 HTML
 
@@ -208,7 +216,7 @@ JavaScript
 ```javascript
 
 const txtBox=document.querySelector("#txt-box"); //get hold of the text box
-console.log(txtBox.value); //displays what ever the user has entered into txtBox.
+console.log(txtBox.value); //displays whatever the user has entered into txtBox.
 ```
 
 Form controls have other properties and methods e.g. we can put focus on a form control.
@@ -220,5 +228,4 @@ txtBox.focus(); //apply focus to the txt box
 ```
 
 ## Additional resources
-If you are struggling there are lots of resources online e.g. https://www.udacity.com/course/javascript-and-the-dom--ud117 .
-And the Mozilla Developer Network (MDN) is a really good reference site  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model . 
+If you are struggling there are lots of resources online Udacity offer a short course on the DOM (https://www.udacity.com/course/javascript-and-the-dom--ud117). The Mozilla Developer Network (MDN) is a really good reference site ( https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).
