@@ -110,8 +110,7 @@ const countries=[
 const countriesFragment = document.createDocumentFragment(); //create a fragment
 countries.forEach(function(country){
     const newParagraph = document.createElement("p"); //create a <p> element
-    const newText = document.createTextNode(`${country.name} has a population of ${country.population}.`); //create some text
-    newParagraph.appendChild(newText); //insert the text into the <p>
+    newParagraph.textContent = `${country.name} has a population of ${country.population}.`; //insert text into the <p>
     countriesFragment.appendChild(newParagraph); //insert the <p> into the fragment
 });
 const countriesDiv = document.querySelector("#countries"); //get hold of the div from the page
