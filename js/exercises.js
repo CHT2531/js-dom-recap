@@ -11,7 +11,7 @@ function doSearch()
 {
   console.log("doSearch is working");
 } // end of doSearch, don't remove this line
-
+*/
 
 //q2
 /*
