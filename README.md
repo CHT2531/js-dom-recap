@@ -4,4 +4,4 @@
 
 * *exercises.js*. Open this in a text editor of your choice. This is where you will write your JavaScript. It already contains some code to get you started. It also contains the exercise questions (in comments, leave these questions commented out).
 
-* [notes.md] (https://github.com/CHT2531/js-dom-recap/blob/master/notes.md). This is a markdown file containing some basic info you might need to complete the exercises. View this on github.
+* [notes.md](https://github.com/CHT2531/js-dom-recap/blob/master/notes.md). This is a markdown file containing some basic info you might need to complete the exercises. View this on github.
