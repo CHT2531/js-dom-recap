@@ -174,6 +174,27 @@ Would result in:-
 <div id="countries">
 </div>
 ```
+## Manipulating attributes
+We can use ```setAttribute()``` to change the HTML attribute of an element. For example:
+
+Before the JavaScript is executed.
+```html
+<img src="" alt="">
+```
+
+```javascript
+const userChoice = prompt("Which countries flag would you like to see?"); //user answers 'usa'
+const imgElem = document.querySelector("img");
+imgElem.setAttribute("src", `images/${userChoice}.png`);
+imgElem.setAttribute("alt", `${userChoice} flag`);
+```
+After the JavaScript has been executed.
+```html
+<img src="img/usa.png" alt="usa flag">
+```
+
+Similarly there is a ```getAttribute()``` method to read HTML attributes. 
+
 
 ## Changing the CSS of an element
 All DOM elements have a *classList* property that maintains a list of classes currently applied to the element. We can add and remove CSS classes using the classList.
