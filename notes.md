@@ -63,8 +63,8 @@ This would result in the div element changing to:-
 ```html
 <div id="content">This is a div.This some new text.</div>
 ```
-## Creating new elements using ```innerHTML```
-There are a number of approaches to inserting content into a page. These notes look at ```innerHTML``` and ```document.createElement()```. 
+## Creating and removing content using ```innerHTML```
+There are a number of approaches to inserting content into a page. These notes look at ```innerHTML``` and ```document.createElement()```. ```innerHTML``` has a cleaner simpler syntax, so is easier to learn.  
 
 ### Inserting single elements
 Here's an example of inserting a single paragraph element into the page.
@@ -119,8 +119,15 @@ Would result in:-
 </div>
 ```
 
+### Removing Elements
+We simply need to set the ```innerHTML``` value to be an empty string.
 
-## Creating new elements using ```document.createElement()```.
+```
+const divElem = document.querySelector("#content"); //get hold of the <div>
+divElem = "";
+```
+
+## Creating and removing content using ```document.createElement()```.
 
 ### Inserting single elements
 Here's an example of inserting a single paragraph element into the page.
@@ -181,9 +188,6 @@ Would result in:-
   <p>USA has a population of 325000000.</p>
 </div>
 ```
-
-## Removing Elements
-To do this we can use *removeChild()*.
 
 ### Removing a single element
 
