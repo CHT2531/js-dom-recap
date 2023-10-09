@@ -2,7 +2,7 @@
 The following is a brief overview of some key topics in JavaScript. They should familiar if you took my Year 1 module.
 
 ## Selecting elements
-Often we need to get hold of parts of the HTML page. You should be familiar with methods such as *document.getElementById()* and *document.querySelector()*. These days *querySelector()* and *querySelectorAll()* are supported by many browsers and are often favoured for their flexibility.
+Often we need to get hold of parts of the HTML page. You should be familiar with methods such as ```document.getElementById()``` and ```document.querySelector()```. These days ```querySelector()``` and ```querySelectorAll()``` are supported by many browsers and are often favoured for their flexibility.
 
 ### querySelector()
 Here's an example of selecting a div element:
@@ -63,9 +63,64 @@ This would result in the div element changing to:-
 ```html
 <div id="content">This is a div.This some new text.</div>
 ```
+## Creating new elements using ```innerHTML```
+There are a number of approaches to inserting content into a page. These notes look at ```innerHTML``` and ```document.createElement()```. 
 
-## Creating new elements
-To do this we use *document.createElement()*.
+### Inserting single elements
+Here's an example of inserting a single paragraph element into the page.
+
+HTML
+```html
+<div id="content">This is a div.</div>
+```
+
+JavaScript
+```javascript
+const divElem = document.querySelector("#content"); //get hold of the <div>
+divElem.innerHTML=`<p>new text</p>`; //insert the text into the <p>
+```
+This would result in the div element changing to:-
+
+```html
+<div id="content"><p>new text</p></div>
+```
+
+### Inserting multiple elements
+Often we want to do this using a loop. Notice the use of ```+=```. This allows us to add content to the ```div``` without deleting the existing content. 
+
+HTML
+```html
+<div id="countries"></div>
+```
+
+JavaScript
+```javascript
+const countries=[
+    {name : "England", capital : "London", continent : "Europe", population: 53000000},
+    {name : "France", capital : "Paris", continent : "Europe", population: 67000000},
+    {name : "USA", capital : "Washington", continent : "N. America", population: 325000000}
+];
+
+const divElem = document.querySelector("#content"); //get hold of the <div>
+countries.forEach(function(country){
+	divElem.innerHTML += `<p>`;
+	divElem.innerHTML += `${country.name} has a population of ${country.population}.`;
+	divElem.innerHTML += `</p>`;
+})
+
+```
+Would result in:-
+
+```html
+<div id="countries">
+  <p>England has a population of 53000000.</p>
+  <p>France has a population of 67000000.</p>
+  <p>USA has a population of 325000000.</p>
+</div>
+```
+
+
+## Creating new elements using ```document.createElement()```.
 
 ### Inserting single elements
 Here's an example of inserting a single paragraph element into the page.
