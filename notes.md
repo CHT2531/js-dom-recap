@@ -71,7 +71,7 @@ Often we want to do this using a loop. Notice the use of ```+=```. This allows u
 
 HTML
 ```html
-<div id="countries"></div>
+<div id="content"></div>
 ```
 
 JavaScript
@@ -93,7 +93,7 @@ countries.forEach(function(country){
 Would result in:-
 
 ```html
-<div id="countries">
+<div id="content">
   <p>England has a population of 53000000.</p>
   <p>France has a population of 67000000.</p>
   <p>USA has a population of 325000000.</p>
