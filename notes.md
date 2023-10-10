@@ -44,25 +44,6 @@ Output
 <p>This is a third paragraph</p>
 ```
 
-## Adding text to an element
-Again there are several ways to do this. Here's one that uses *createTextNode*.
-
-HTML
-```html
-<div id="content">This is a div.</div>
-
-```
-
-JavaScript
-```javascript
-const divElem = document.querySelector("#content"); //get hold of a <div>
-const textNode = document.createTextNode("This is some new text."); //create the text
-divElem.appendChild(textNode); //insert the text into the <div>
-```
-This would result in the div element changing to:-
-```html
-<div id="content">This is a div.This some new text.</div>
-```
 ## Creating and removing content using ```innerHTML```
 There are a number of approaches to inserting content into a page. These notes look at ```innerHTML``` and ```document.createElement()```. ```innerHTML``` has a cleaner simpler syntax, so is easier to learn.  
 
@@ -77,7 +58,7 @@ HTML
 JavaScript
 ```javascript
 const divElem = document.querySelector("#content"); //get hold of the <div>
-divElem.innerHTML=`<p>new text</p>`; //insert the text into the <p>
+divElem.innerHTML=`<p>new text</p>`; //insert the new element into the <div>
 ```
 This would result in the div element changing to:-
 
