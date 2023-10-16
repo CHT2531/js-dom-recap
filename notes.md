@@ -152,7 +152,7 @@ const countriesDiv = document.querySelector("#countries"); //get hold of the div
 countries.forEach(function(country){
     const newParagraph = document.createElement("p"); //create a <p> element
     newParagraph.textContent = `${country.name} has a population of ${country.population}.`; //insert text into the <p>
-    countriesDiv.appendChild(newParagraph); // insert the <p> into the fragment
+    countriesDiv.appendChild(newParagraph); // insert the <p> into the <div>
 });
 
 ```
