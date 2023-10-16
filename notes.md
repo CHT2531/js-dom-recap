@@ -133,9 +133,7 @@ This would result in the div element changing to:-
 ```
 
 ### Inserting multiple elements
-When we make changes to the HTML page the browser has to re-draw the page. We call this reflow. Making lots of changes at a time can affect browser performance, slowing a webpage down.
-
-If we want to make lots of changes to a document we should use a document fragment. A document fragment allows us to construct HTML without updating the page. Once we have finished building our fragment of HTML, we can insert it into the page. See the following:
+Using a ```forEach``` loop we can iterate over an array and generate new HTML elements for each item in the array.
 
 HTML
 ```html
@@ -150,14 +148,12 @@ const countries=[
     {name : "USA", capital : "Washington", continent : "N. America", population: 325000000}
 ];
 
-const countriesFragment = document.createDocumentFragment(); //create a fragment
+const countriesDiv = document.querySelector("#countries"); //get hold of the div from the page
 countries.forEach(function(country){
     const newParagraph = document.createElement("p"); //create a <p> element
     newParagraph.textContent = `${country.name} has a population of ${country.population}.`; //insert text into the <p>
-    countriesFragment.appendChild(newParagraph); //insert the <p> into the fragment
+    countriesDiv.appendChild(newParagraph); // insert the <p> into the fragment
 });
-const countriesDiv = document.querySelector("#countries"); //get hold of the div from the page
-countriesDiv.appendChild(countriesFragment); // we only update the document once!
 
 ```
 Would result in:-
